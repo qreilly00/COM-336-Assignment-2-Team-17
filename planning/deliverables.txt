@@ -1,0 +1,18 @@
+Deliverables: 
+
+Website that uses PHP and MySQL using a selected theme.
+Website must run on AWS.
+
+Zipped folder (Must be named "COM336_assignment2_2022_Team17"):
+- All website files and folders.
+- MySQL database.
+- All ".sql" files used to create, link and populate database.
+- Help document with usernames and passwords and description of contents.
+- Slack and Trello snapshot document.
+- AWS URL and admin details document.
+
+2 videos uploaded to panopto:
+- Site development and implementation discussion.
+- Walkthrough of site functionality (Points 1 to 9 in the marking scheme).
+
+Individual peer review.
