@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Library - Book Reading</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <style>
+        .sidenav {
+            height: 100%;
+            width: 160px;
+            position: fixed;
+            z-index: 1;
+            left: 0;
+            background-color: #ffdda6;
+            overflow-x: hidden;
+            padding-top: 20px;
+        }
+
+        .sidenav a {
+            padding: 6px 8px 6px 16px;
+            text-decoration: none;
+            font-size: 25px;
+            color: black;
+            display: block;
+        }
+
+        .sidenav a:hover {
+            color: #f1f1f1;
+        }
+
+        .main {
+            margin-left: 160px;
+            /* Same as the width of the sidenav */
+            font-size: 28px;
+            /* Increased text to enable scrolling */
+            padding: 0px 10px;
+        }
+
+        @media screen and (max-height: 450px) {
+            .sidenav {
+                padding-top: 15px;
+            }
+
+            .sidenav a {
+                font-size: 18px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="topnav">
+        <a href="index.html"><img src="assets/LOGO4WEBSITE.png" alt="Site logo" height="50px"></a>
+
+        <div class="searchbar">
+            <a class="searchtext" href="#filter">Filter</a>
+            <input type="text" placeholder="Search..">
+            <a class="searchtext" href="#Search">Search</a>
+        </div>
+
+        <a class="text" href="signin.html">Sign in/Log in</a>
+    </div>
+
+    <div class="sidenav">
+        <h3>Applied Filters</h3>
+        <ul class="applied-filters">
+            <li>Agnes<span class="add">&times;</span></li>
+            <li>Billy<span class="add">&times;</span></li>
+            <li>Bob<span class="add">&times;</span></li>
+            <li>Calvin<span class="add">&times;</span></li>
+            <li>Christina<span class="add">&times;</span></li>
+        </ul>
+		
+        <h3>Chapters</h3>
+        <ul class="filters">
+            <li>Chapter 1<span class="add">&plus;</span></li>
+            <li>Chapter 2<span class="add">&plus;</span></li>
+            <li>Chapter 3<span class="add">&plus;</span></li>
+            <li>Chapter 4<span class="add">&plus;</span></li>
+            <li>Chapter 5<span class="add">&plus;</span></li>
+        </ul>        
+    </div>
+
+
+
+</body>
+
+</html>
