@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Library - Search Result</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+
+<body>
+    <div class="topnav">
+        <a href="index.html"><img src="assets/LOGO4WEBSITE.png" alt="Site logo" height="80px"></a>
+
+        <div class="searchbar">
+            <input type="text" placeholder="Search">
+            <a class="searchtext" href="#Search">Search</a>
+        </div>
+
+        <a class="text" href="signin.html">Sign in/Log in</a>
+    </div>
+
+    <div class="sidenav">
+        <div id="myBtnContainer">
+            <button class="btn active" onclick="filterSelection('all')"> Show all</button>
+            <button class="btn" onclick="filterSelection('crime')"> Crime</button>
+            <button class="btn" onclick="filterSelection('fantasy')"> Fantasy</button>
+            <button class="btn" onclick="filterSelection('adventure')"> Adventure</button>
+        </div>
+    </div>
+
+    <div class="main">
+        <div class="container">
+            <div class="filterDiv fantasy adventure">
+                <img src="assets/DEATHLY_HALLOWS.png" alt="Site logo" height="250px" class="center"> <br> <span
+                    class="caption">J.K Rowling <br>Harry Potter & The Deathly Hallows</span>
+                    <br>
+                <button onclick="window.location.href='preview.html'">Preview</button>
+                <button onclick="window.location.href='reading.html'">Read</button>
+            </div>
+            <div class="filterDiv fantasy adventure">
+                <img src="assets/FANTASTIC_BEASTS_&_WHERE_TO_FIND_THEM.png" alt="Site logo" height="250px"
+                    class="center"> <span class="caption">J.K Rowling <br>Fantastic Beasts & Where to find them</span>
+                <button onclick="window.location.href='preview.html'">Preview</button>
+                <button onclick="window.location.href='reading.html'">Read</button>
+            </div>
+            <div class="filterDiv fantasy">
+                <img src="assets/QUIDDITCH_THROUGH_THE_AGES.png" alt="Site logo" height="250px" class="center"> <span
+                    class="caption">J.K Rowling <br>Quidditch Thorugh The Ages</span>
+                <button onclick="window.location.href='preview.html'">Preview</button>
+                <button onclick="window.location.href='reading.html'">Read</button>
+            </div>
+            <div class="filterDiv fantasy">
+                <img src="assets/THE_CASUAL_VACANCY.png" alt="Site logo" height="250px" class="center"> <span
+                    class="caption">J.K Rowling <br>The Casual Vacancy</span>
+                <button onclick="window.location.href='preview.html'">Preview</button>
+                <button onclick="window.location.href='reading.html'">Read</button>
+            </div>
+            <div class="filterDiv fantasy">
+                <img src="assets/THE_CHRISTMAS_PIG.png" alt="Site logo" height="250px" class="center"> <span
+                    class="caption">J.K Rowling <br>The Christmas Pig</span>
+                <button onclick="window.location.href='preview.html'">Preview</button>
+                <button onclick="window.location.href='reading.html'">Read</button>
+            </div>
+            <div class="filterDiv fantasy adventure">
+                <img src="assets/THE_CRIMES_OF_GRINDELWALD.png" alt="Site logo" height="250px" class="center"> <span
+                    class="caption">J.K Rowling <br>The Crimes of Grindelwald</span>
+                <button onclick="window.location.href='preview.html'">Preview</button>
+                <button onclick="window.location.href='reading.html'">Read</button>
+            </div>
+            <div class="filterDiv crime">
+                <img src="assets/THE_CUCKOO'S_CALLING.png" alt="Site logo" height="250px" class="center"> <span
+                    class="caption">Robert Galbraith <br>The Cuckoo's Calling</span>
+                <button onclick="window.location.href='preview.html'">Preview</button>
+                <button onclick="window.location.href='reading.html'">Read</button>
+            </div>
+            <div class="filterDiv fantasy adventure">
+                <img src="assets/THE_CURSED_CHILD_PARTS_1&2.png" alt="Site logo" height="250px" class="center"> <span
+                    class="caption">J.K Rowling <br> Harry Potter & The Cursed Child</span>
+                <button onclick="window.location.href='preview.html'">Preview</button>
+                <button onclick="window.location.href='reading.html'">Read</button>
+            </div>
+            <div class="filterDiv adventure">
+                <img src="assets/THE_ICKABOG.png" alt="Site logo" height="250px" class="center"> <span
+                    class="caption">J.K Rowling <br> The Ickabog</span>
+                <button onclick="window.location.href='preview.html'">Preview</button>
+                <button onclick="window.location.href='reading.html'">Read</button>
+            </div>
+            <div class="filterDiv crime">
+                <img src="assets/TROUBLED_BLOOD.png" alt="Site logo" height="250px" class="center"> <span
+                    class="caption">Robert Galbraith <br> Troubled Blood</span>
+                <button onclick="window.location.href='preview.html'">Preview</button>
+                <button onclick="window.location.href='reading.html'">Read</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+
+        filterSelection("all")
+        function filterSelection(c) {
+            var x, i;
+            x = document.getElementsByClassName("filterDiv");
+            if (c == "all") c = "";
+            // Add the "show" class (display:block) to the filtered elements, and remove the "show" class from the elements that are not selected
+            for (i = 0; i < x.length; i++) {
+                w3RemoveClass(x[i], "show");
+                if (x[i].className.indexOf(c) > -1) w3AddClass(x[i], "show");
+            }
+        }
+
+        // Show filtered elements
+        function w3AddClass(element, name) {
+            var i, arr1, arr2;
+            arr1 = element.className.split(" ");
+            arr2 = name.split(" ");
+            for (i = 0; i < arr2.length; i++) {
+                if (arr1.indexOf(arr2[i]) == -1) {
+                    element.className += " " + arr2[i];
+                }
+            }
+        }
+
+        // Hide elements that are not selected
+        function w3RemoveClass(element, name) {
+            var i, arr1, arr2;
+            arr1 = element.className.split(" ");
+            arr2 = name.split(" ");
+            for (i = 0; i < arr2.length; i++) {
+                while (arr1.indexOf(arr2[i]) > -1) {
+                    arr1.splice(arr1.indexOf(arr2[i]), 1);
+                }
+            }
+            element.className = arr1.join(" ");
+        }
+
+        // Add active class to the current control button (highlight it)
+        var btnContainer = document.getElementById("myBtnContainer");
+        var btns = btnContainer.getElementsByClassName("btn");
+        for (var i = 0; i < btns.length; i++) {
+            btns[i].addEventListener("click", function () {
+                var current = document.getElementsByClassName("active");
+                current[0].className = current[0].className.replace(" active", "");
+                this.className += " active";
+            });
+        }
+    </script>
+
+</body>
+
+</html>

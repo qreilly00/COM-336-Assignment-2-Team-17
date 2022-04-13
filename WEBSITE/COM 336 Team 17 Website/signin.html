@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Library - Sign In/ Log In</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+
+<body>
+    <div class="topnav">
+        <a href="index.html"><img src="assets/LOGO4WEBSITE.png" alt="Site logo" height="80px"></a>
+
+        <div class="searchbar">
+            <input type="text" placeholder="Search">
+            <a class="searchtext" href="#Search">Search</a>
+        </div>
+
+        <a class="text" href="signin.html">Sign in/ Log in</a>
+    </div>
+
+    <div class="login">
+        <form action="action_page.php" style="border-top:1px solid rgb(248, 248, 248)">
+            <div class="container">
+                <h1>Log in</h1>
+                <p><br>Please fill in this form to access your account.</p>
+                <hr>
+
+                <label for="email"><b>Email</b></label>
+                <input type="text" placeholder="Enter Email" name="email" required>
+
+                <label for="psw"><b>Password</b></label>
+                <input type="password" placeholder="Enter Password" name="psw" required>
+
+                <label>
+                    <input type="checkbox" checked="checked" name="remember" style="margin-bottom:15px"> Remember me
+                </label>
+
+                <div class="clearfix">
+                    <button type="submit" class="loginbtn">Log In</button>
+                </div>
+
+                <button type="button" class="forgotbtn">Forgot Password?</button>
+            </div>
+        </form>
+    </div>
+    <div class="signin">
+        <form action="action_page.php" style="border-top:1px solid rgb(248, 248, 248)">
+            <div class="container">
+                <h1>Sign Up</h1>
+                <p><br>Please fill in this form to create an account.</p>
+                <hr>
+
+                <label for="email"><b>Email</b></label>
+                <input type="text" placeholder="Enter Email" name="email" required>
+
+                <label for="psw"><b>Password</b></label>
+                <input type="password" placeholder="Enter Password" name="psw" required>
+
+                <label for="psw-repeat"><b>Repeat Password</b></label>
+                <input type="password" placeholder="Repeat Password" name="psw-repeat" required>
+
+                <p>By creating an account you agree to our <a href="tandc.html" style="color:dodgerblue">Terms & Conditions</a>.</p>
+
+                <div class="clearfix">
+                    <button type="submit" class="signupbtn">Sign Up</button>
+                </div>
+            </div>
+        </form>
+    </div>
+
+</body>
+
+</html>
